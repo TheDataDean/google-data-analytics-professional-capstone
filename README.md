@@ -1,5 +1,6 @@
 # Google Data Analytics Professional Capstone Project: Cyclistic
 This is my first unguided data project and is designed as a culmination of Google's Data Analytics Professional Certificate on Coursera, and to help me start to build a portfolio and showcase what I have learned.
+In addition to documenting the case study itself I will be including information about my workflow, what issues I encountered and what I learned.
 
 ## Background
 For this project I am playing the role of a junior data analyst at a bike share company called Cyclistic. The company has determined that annual membership holders are more profitable than casual riders. They want to launch a marketing campaign targeting casual riders in order to persuade more of them to become annual members. As a part of this, my job is to analyse the differences between how casual riders and annual members use the bikes.
@@ -66,4 +67,26 @@ Sub google_cyclistic()
     Selection.Delete Shift:=xlToLeft
 End Sub
 ```
-I then save the files to be transferred to Google Bigquery for further processing which would be too slow and cumbersome in Excel.
+I then save the files to be transferred to Google Bigquery for further processing which would be too slow and cumbersome in Excel. While doing this I found that there were 2 problems:
+
+Firstly I got an invalid time string error for my calculated ride_length column when attempting to upload files. I clicked job details to get more information, and navigated to the appropriate row in the spreadsheet, finding that some of the values where negative, which when formatted as time generated an error. I deleted the affected rows.
+
+During this process I also became aware that when recording the macro above I used flash fill. Rather than inserting the flash fill command into the macro it inserted the specific number of rows from the first sheet, meaning that I have many NULLs.
+
+>This was a valable learning experience showing me that I should wrap my excel formulas in an IFERROR() and that I must learn more about how to use macros effectively
+
+### Processing in Bigquery Using SQL
+
+First I joined the 12 tables into one. Within this query I also changed the day_of_week column to display "MON", "TUE" etc. rather than numerical values and created a new 'month' column.
+
+View my first SQL query here
+
+Using ride_id as the unique identifier I found duplicate rows:
+
+My second SQL query removed the duplicates, and at this time I also rounded the coordinate values since I had noticed that the number of decimal places varied.
+
+Take a look at my second SQL query here.
+
+When checking for NULLs I found a large number in the start and end station names and coordinates. Many stations, however, had either the name or the coordinates but not both. I would like to use the map coordinates to fill in the missing names and vice versa, but I decided this would probably be easier to do using R, which I wanted to use for my subsequent analysis anyway, so for now I deleted only the rows where both the map coordinates or the name (for either start or end station) where missing and then exported the result.
+
+View my final SQL query here.
