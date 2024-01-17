@@ -79,7 +79,7 @@ During this process I also became aware that when recording the macro above I us
 
 First I joined the 12 tables into one. Within this query I also changed the day_of_week column to display "MON", "TUE" etc. rather than numerical values and created a new 'month' column.
 
-[View my first SQL query here](https://github.com/TheDataDean/google-data-analytics-professional-capstone/blob/main/join.sql)
+[View my first SQL query here.](https://github.com/TheDataDean/google-data-analytics-professional-capstone/blob/main/join.sql)
 
 Using ride_id as the unique identifier I found duplicate rows:
 
