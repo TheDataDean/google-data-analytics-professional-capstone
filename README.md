@@ -99,4 +99,6 @@ In order to answer my question about whether there was a difference between star
 
 76 stations were in the top 100 for both groups. 
 
+![screenshot of SQL query](https://github.com/TheDataDean/google-data-analytics-professional-capstone/blob/main/Screenshot%202024-01-17%20171122.png)
+
 My station analysis SQL code
