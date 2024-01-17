@@ -91,4 +91,4 @@ My second SQL query removed the duplicates, and at this time I also rounded the 
 
 When checking for NULLs I found a large number in the start and end station names and coordinates. Many stations, however, had either the name or the coordinates but not both. I would like to use the map coordinates to fill in the missing names and vice versa, but I decided this would probably be easier to do using R, which I wanted to use for my subsequent analysis anyway, so for now I deleted only the rows where both the map coordinates or the name (for either start or end station) where missing and then exported the result.
 
-View my final SQL query here.
+[View my final SQL query here.](https://github.com/TheDataDean/google-data-analytics-professional-capstone/blob/main/remove_nulls.sql)
