@@ -83,6 +83,8 @@ View my first SQL query here
 
 Using ride_id as the unique identifier I found duplicate rows:
 
+!["screenshot of query showing duplicates"](https://github.com/TheDataDean/google-data-analytics-professional-capstone/blob/main/Screenshot%202024-01-17%20101154.png)
+
 My second SQL query removed the duplicates, and at this time I also rounded the coordinate values since I had noticed that the number of decimal places varied.
 
 Take a look at my second SQL query here.
