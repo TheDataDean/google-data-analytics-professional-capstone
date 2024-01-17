@@ -89,6 +89,6 @@ My second SQL query removed the duplicates, and at this time I also rounded the 
 
 [Take a look at my second SQL query here.](https://github.com/TheDataDean/google-data-analytics-professional-capstone/blob/main/deduplicate.sql)
 
-When checking for NULLs I found a large number in the start and end station names and coordinates. Many stations, however, had either the name or the coordinates but not both. I would like to use the map coordinates to fill in the missing names and vice versa, but I decided this would probably be easier to do using R, which I wanted to use for my subsequent analysis anyway, so for now I deleted only the rows where both the map coordinates or the name (for either start or end station) were missing and then exported the result.
+When checking for NULLs I found a large number in the start and end station names and coordinates. Many stations, however, had either the name or the coordinates but not both. I have decided that observations with no station name but which do have coordinates may still be useful if I need to map journeys, and entries with no coordinates but which do have a station name may be useful to see if some statins are more popular with one group over the other, but entries with neither are not useful so for now I deleted only the rows where both the map coordinates or the name (for either start or end station) were missing and then exported the result.
 
 [View my final SQL query here.](https://github.com/TheDataDean/google-data-analytics-professional-capstone/blob/main/remove_nulls.sql)
