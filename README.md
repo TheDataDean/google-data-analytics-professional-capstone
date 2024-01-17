@@ -73,7 +73,7 @@ Firstly I got an invalid time string error for my calculated ride_length column 
 
 During this process I also became aware that when recording the macro above I used flash fill. Rather than inserting the flash fill command into the macro it inserted the specific number of rows from the first sheet, meaning that I have many NULLs.
 
->This was a valable learning experience showing me that I should wrap my excel formulas in an IFERROR() and that I must learn more about how to use macros effectively
+>This was a valuable learning experience showing me that I should wrap my excel formulas in an IFERROR() and that I must learn more about how to use macros effectively
 
 ### Processing in Bigquery Using SQL
 
@@ -87,7 +87,7 @@ Using ride_id as the unique identifier I found duplicate rows:
 
 My second SQL query removed the duplicates, and at this time I also rounded the coordinate values since I had noticed that the number of decimal places varied.
 
-Take a look at my second SQL query here.
+[Take a look at my second SQL query here.](https://github.com/TheDataDean/google-data-analytics-professional-capstone/blob/main/deduplicate.sql)
 
 When checking for NULLs I found a large number in the start and end station names and coordinates. Many stations, however, had either the name or the coordinates but not both. I would like to use the map coordinates to fill in the missing names and vice versa, but I decided this would probably be easier to do using R, which I wanted to use for my subsequent analysis anyway, so for now I deleted only the rows where both the map coordinates or the name (for either start or end station) where missing and then exported the result.
 
