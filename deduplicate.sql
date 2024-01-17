@@ -1,4 +1,5 @@
 --remove duplicates and round values for lng and lat
+
 SELECT
   ride_id,
   rideable_type,
@@ -25,4 +26,4 @@ FROM (
   FROM `deanscapstone.cyclistic.full_year`
 )
 WHERE row_number = 1
-)
+);
