@@ -1,5 +1,6 @@
 --Join all 12 months into a table with results to be saved as table 'full_year'
 --Create new column for month of year
+
 WITH j AS (
 SELECT
   ride_id,
@@ -232,4 +233,4 @@ SELECT
   start_lng,
   end_lat,
   end_lng
-FROM J
+FROM J;
