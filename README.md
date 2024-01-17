@@ -17,7 +17,7 @@ Identify relevant differences between casual riders and annual members in order 
 
 - [ ]	Is there a difference in the days of the week that the two groups use the service?
 - [ ]	Is there a difference in trip length between the two groups?
-- [ ] Are particular stations more popular with one group over the other?
+- [x] Are particular start stations more popular with one group over the other?
 - [ ]	Are there particular geographic areas which are more popular with one group over the other?
 - [ ]	Do annual members use a different type of bike to casual members?
 - [ ]	Do they use bikes at different times of day
@@ -89,6 +89,14 @@ My second SQL query removed the duplicates, and at this time I also rounded the 
 
 [Take a look at my second SQL query here.](https://github.com/TheDataDean/google-data-analytics-professional-capstone/blob/main/deduplicate.sql)
 
-When checking for NULLs I found a large number in the start and end station names and coordinates. Many stations, however, had either the name or the coordinates but not both. I have decided that observations with no station name but which do have coordinates may still be useful if I need to map journeys, and entries with no coordinates but which do have a station name may be useful to see if some statins are more popular with one group over the other, but entries with neither are not useful so for now I deleted only the rows where both the map coordinates or the name (for either start or end station) were missing and then exported the result.
+When checking for NULLs I found a large number in the start and end station names and coordinates. Many stations, however, had either the name or the coordinates but not both. I have decided that observations with no station name but which do have coordinates may still be useful if I need to map journeys, and entries with no coordinates but which do have a station name may be useful to see if some statins are more popular with one group over the other, but entries with neither are not useful so for now I deleted only the rows where both the map coordinates or the name (for either start or end station) were missing.
 
 [View my final SQL query here.](https://github.com/TheDataDean/google-data-analytics-professional-capstone/blob/main/remove_nulls.sql)
+
+## Analysis
+
+In order to answer my question about whether there was a difference between start stations for the two groups I asked more specifically: How many stations are in the top 100 start stations for both groups?
+
+76 stations were in the top 100 for both groups. 
+
+My station analysis SQL code
