@@ -101,4 +101,10 @@ In order to answer my question about whether there was a difference between star
 
 ![screenshot of SQL query](https://github.com/TheDataDean/google-data-analytics-professional-capstone/blob/main/Screenshot%202024-01-17%20171122.png)
 
-My station analysis SQL code
+[My station analysis SQL code](https://github.com/TheDataDean/google-data-analytics-professional-capstone/blob/main/station_analysis.sql)
+
+Comparing the type of bike hired by each group I found that members did not use docked bikes at all, and that electric bikes were the most popular in both groups but by a larger margin for the casual riders.
+
+SQL code
+
+#### chart
