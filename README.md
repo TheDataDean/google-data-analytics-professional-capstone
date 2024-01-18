@@ -16,10 +16,8 @@ Identify relevant differences between casual riders and annual members in order 
 ### Questions to ask during analysis:
 
 - [ ]	Is there a difference in the days of the week that the two groups use the service?
-- [ ]	Is there a difference in trip length between the two groups?
 - [x] Are particular start stations more popular with one group over the other?
-- [ ]	Are there particular geographic areas which are more popular with one group over the other?
-- [ ]	Do annual members use a different type of bike to casual members?
+- [x]	Do annual members use a different type of bike to casual members?
 - [ ]	Do they use bikes at different times of day
       
 ## Preparation
@@ -108,5 +106,9 @@ Comparing the type of bike hired by each group I found that members did not use 
 [SQL code](https://github.com/TheDataDean/google-data-analytics-professional-capstone/blob/main/bike_type.sql)
 
 #### chart
+![bike type chart](https://github.com/TheDataDean/google-data-analytics-professional-capstone/blob/main/total_docked%2C%20total_classic%2C%20total_electric%20by%20member_casual.png)
+
+To analysis bike use on different days and at different times of days I decided that a visual analysis would be useful so I switched over to Tableau.
+
 
 
