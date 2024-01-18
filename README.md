@@ -106,7 +106,7 @@ Comparing the type of bike hired by each group I found that members did not use 
 [SQL code](https://github.com/TheDataDean/google-data-analytics-professional-capstone/blob/main/bike_type.sql)
 
 #### chart
-![bike type chart](https://github.com/TheDataDean/google-data-analytics-professional-capstone/blob/main/total_docked%2C%20total_classic%2C%20total_electric%20by%20member_casual.png)
+![bike type chart](https://github.com/TheDataDean/google-data-analytics-professional-capstone/blob/main/Screenshot%202024-01-18%20200025.png)
 
 To analysis bike use on different days and at different times of days I decided that a visual analysis would be useful so I switched over to Tableau.
 
