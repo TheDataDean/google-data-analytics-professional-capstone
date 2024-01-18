@@ -112,7 +112,7 @@ To analysis bike use on different days and at different times of days I decided 
 
 You can [view this on Tableau](https://public.tableau.com/app/profile/dean.walsh/viz/GoogleCapstoneProjectTimeAnalysis/Dashboard1) or here is an image:
 
-
+![image showing rides per day and per hour](https://github.com/TheDataDean/google-data-analytics-professional-capstone/blob/main/Dashboard%201.png)
 
 
 
