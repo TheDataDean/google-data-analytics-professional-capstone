@@ -114,5 +114,9 @@ You can [view this on Tableau](https://public.tableau.com/app/profile/dean.walsh
 
 ![image showing rides per day and per hour](https://github.com/TheDataDean/google-data-analytics-professional-capstone/blob/main/Dashboard%201.png)
 
+## Recommendations
 
+- Use by casual members clearly peaks on weekends, while for members the peak is during the work week. It seems likely, therefore, that members are using the bikes for commuting whereas casual riders are using them for leisure. This is confirmed by the spike in trips started by members around 8:00am which is not present in the casual rider group which exhibits a much smoother increase throughout the morning. I therefore recommend that a marketing campaign aimed at casual users should aim to communicate the benefits of using the bikes for commuting to work.
+- Electric bikes are the most popular with both groups, but especially casual riders. Since electric bikes have great benefits are faster and easier I would focus the advertising on highlighting how quickly and easily you can zip around gridlocked traffic on an electric bike to get to work without breaking a sweat.
+- There is no significant difference in station use, so I would recommend the advertising campaign to cover all of the most popular stations.
 
