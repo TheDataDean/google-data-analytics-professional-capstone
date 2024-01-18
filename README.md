@@ -105,6 +105,8 @@ In order to answer my question about whether there was a difference between star
 
 Comparing the type of bike hired by each group I found that members did not use docked bikes at all, and that electric bikes were the most popular in both groups but by a larger margin for the casual riders.
 
-SQL code
+[SQL code](https://github.com/TheDataDean/google-data-analytics-professional-capstone/blob/main/bike_type.sql)
 
 #### chart
+
+
