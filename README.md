@@ -1,5 +1,5 @@
 # Google Data Analytics Professional Capstone Project: Cyclistic
-This is my first unguided data project and is designed as a culmination of Google's Data Analytics Professional Certificate on Coursera, and to help me start to build a portfolio and showcase what I have learned.
+This is my first unguided data project (as well as the first time I have used Github!) and is designed as a culmination of Google's Data Analytics Professional Certificate on Coursera, and to help me start to build a portfolio and showcase what I have learned.
 In addition to documenting the case study itself I will be including information about my workflow, what issues I encountered and what I learned.
 
 ## Background
@@ -29,7 +29,7 @@ To prepare the data for analysis I decided to start by opening one of the files 
 
 ## Processing
 
-Within Excel I checked how many unique bike types there are (3) then created a new column for ride length and another for the day of week that each trip started. I also deleted start_station_id and end_station_id because the id's are in various different formats and a quick check showed that there are no spelling variations in station names so they can be used as unique identifiers for each station. Since the data is spread out across 12 separate workbooks I used a macro to edit them:
+I started in Excel because at this point I was following Google's instructions for completing the project. Within Excel I checked how many unique bike types there are (3) then created a new column for ride length and another for the day of week that each trip started. I also deleted start_station_id and end_station_id because the id's are in various different formats and a quick check showed that there are no spelling variations in station names so they can be used as unique identifiers for each station. Since the data is spread out across 12 separate workbooks I used a macro to edit them:
 
 ``` vba
 Sub google_cyclistic()
@@ -73,9 +73,13 @@ During this process I also became aware that when recording the macro above I us
 
 >This was a valuable learning experience showing me that I should wrap my excel formulas in an IFERROR() and that I must learn more about how to use macros effectively
 
+Having rectified this error I moved realized that continuing to follow Google's instructions would not be feasible for me as the dataset was too large for Excel to handle on my machine without substantial wait times for each operation, so I decided to move to SQL since I am currenty more confident using SQL for analysis than either R or Tableau which are the other technologies covered in the Google course. Python might have worked better for me but I wated to stick with technologies covered in the course. In hindsight it would have been easier to use the same technology for as much of the project as possible rather than doing part in excel and part elsewhere, but I am glad I at least opened the files and got to know the data in excel as a first step.
+
 ### Processing in Bigquery Using SQL
 
-First I joined the 12 tables into one. Within this query I also changed the day_of_week column to display "MON", "TUE" etc. rather than numerical values and created a new 'month' column.
+Processing the data in SQL required me to learn a lot more about Google Cloud Platform. This is because many of the files were too large to upload directly to Bigquery so I needed to be host them on GCP first and then imported to Bigquery. This was a great learning experience for me as I had not used anything within GCP outside of Bigquery itself before this.
+
+Once all the data was imported into my project within Bigquery I first joined the 12 tables into one. Within this query I also changed the day_of_week column to display "MON", "TUE" etc. rather than numerical values and created a new 'month' column. If I was to do this again I would have just created this column using SQL in the beginning.
 
 [View my first SQL query here.](https://github.com/TheDataDean/google-data-analytics-professional-capstone/blob/main/join.sql)
 
@@ -101,22 +105,35 @@ In order to answer my question about whether there was a difference between star
 
 [My station analysis SQL code](https://github.com/TheDataDean/google-data-analytics-professional-capstone/blob/main/station_analysis.sql)
 
+#### Use of different bike types
+
 Comparing the type of bike hired by each group I found that members did not use docked bikes at all, and that electric bikes were the most popular in both groups but by a larger margin for the casual riders.
 
 [SQL code](https://github.com/TheDataDean/google-data-analytics-professional-capstone/blob/main/bike_type.sql)
 
-#### chart
+
 ![bike type chart](https://github.com/TheDataDean/google-data-analytics-professional-capstone/blob/main/Screenshot%202024-01-18%20200025.png)
 
-To analysis bike use on different days and at different times of days I decided that a visual analysis would be useful so I switched over to Tableau.
+## Further Analysis and Presentation
 
-You can [view this on Tableau](https://public.tableau.com/app/profile/dean.walsh/viz/GoogleCapstoneProjectTimeAnalysis/Dashboard1) or here is an image:
+To analysis bike use on different days and at different times of days I decided that a visual analysis would be useful so I switched over to Tableau. I again had trouble moving the data between GCP and Tableau due to the size and the fact that it was downloaded from GCP in a file format which Tableau did not accept. These types of issues with compatibility and migration caused me more difficulties during this project than the data analysis itself.
 
-![image showing rides per day and per hour](https://github.com/TheDataDean/google-data-analytics-professional-capstone/blob/main/Dashboard%201.png)
+>Moving forward I will focus my learning more on learning different platforms and on creating data pipelines and not just on learning the features of individual platforms in isolation. My aim will not only be to improve my ability to migrate data, but also to improve my ability to select the most appropriate technology in the first place.
+
+At the beginning I was not very confident using Tableau and needed further study elsewhere to complete this. Having done so I realized that I would have done the processing and preparation within Tableau in the first place, which would have made life easier for me.
+
+Within Tableau I analyzed the differences between casual riders and members according to day of week, month and time using static plots. I then created a dynamic map of start stations to see if there was any geographic patterns that might be relevant.
+
+To see the full analysis and presentation please [view the story I created on Tableau](https://public.tableau.com/app/profile/dean.walsh/viz/DeansGoogleCapstoneProject/CyclisticBikeUsebyUserType)
+
+Otherwise see the first page below as a sample:
+
+![Usage patterns by User type at different times](https://github.com/TheDataDean/google-data-analytics-professional-capstone/blob/main/Screenshot%202024-01-17%20171122.png)
+
 
 ## Recommendations
 
 - Use by casual members clearly peaks on weekends, while for members the peak is during the work week. It seems likely, therefore, that members are using the bikes for commuting whereas casual riders are using them for leisure. This is confirmed by the spike in trips started by members around 8:00am which is not present in the casual rider group which exhibits a much smoother increase throughout the morning. I therefore recommend that a marketing campaign aimed at casual users should aim to communicate the benefits of using the bikes for commuting to work.
 - Electric bikes are the most popular with both groups, but especially casual riders. Since electric bikes have great benefits are faster and easier I would focus the advertising on highlighting how quickly and easily you can zip around gridlocked traffic on an electric bike to get to work without breaking a sweat.
-- There is no significant difference in station use, so I would recommend the advertising campaign to cover all of the most popular stations.
+- Use of Cyclistic by both casual riders and members peaks in the summer months around coastal areas (see my tableau story link), but there is a greater increase for casual riders than members. This further confirms the idea that casual riders are using the bikes more for leisure. It also presents an opportunity for marketing as promotional activities can be focussed on the coastal areas during the summer where there are is an increase in casual users, reducing costs compared to a broader campaign. These same stations are also heavily used by members throughout the year (see initial SQL analysis, suggesting that there is potential to convert casual riders to memmbers in these areas. I would recommend local advertising such as billboards during the summer around the coast.
 
