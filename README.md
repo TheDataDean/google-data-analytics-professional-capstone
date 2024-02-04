@@ -124,11 +124,11 @@ At the beginning I was not very confident using Tableau and needed further study
 
 Within Tableau I analyzed the differences between casual riders and members according to day of week, month and time using static plots. I then created a dynamic map of start stations to see if there was any geographic patterns that might be relevant.
 
-To see the full analysis and presentation please [view the story I created on Tableau](https://public.tableau.com/app/profile/dean.walsh/viz/DeansGoogleCapstoneProject/CyclisticBikeUsebyUserType)
+### To see the full analysis and presentation please [view the story I created on Tableau](https://public.tableau.com/app/profile/dean.walsh/viz/DeansGoogleCapstoneProject/CyclisticBikeUsebyUserType)
 
 Otherwise see the first page below as a sample:
 
-![Usage patterns by User type at different times](https://github.com/TheDataDean/google-data-analytics-professional-capstone/blob/main/Screenshot%202024-01-17%20171122.png)
+![Usage patterns by User type at different times](https://github.com/TheDataDean/google-data-analytics-professional-capstone/blob/main/Dashboard%201%20(1).png)
 
 
 ## Recommendations
