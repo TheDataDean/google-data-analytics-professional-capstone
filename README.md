@@ -18,7 +18,9 @@ Identify relevant differences between casual riders and annual members in order 
 - [x]	Is there a difference in the days of the week that the two groups use the service?
 - [x] Are particular start stations more popular with one group over the other?
 - [x]	Do annual members use a different type of bike to casual members?
-- [x]	Do they use bikes at different times of day
+- [x]	Do they use bikes at different times of day?
+- [x]	Are there any differences in geographic areas used by each group?
+- [x]	Are seasonal changes different for casual users vs members?
       
 ## Preparation
 The data has been stored in an online repository and made available for download as csv files. For the purposes of this case study, I will assume that it is a complete record of every trip and therefore bias is not an issue. The data is current. Since it is first-party data collected by the company itself further validation is not required. 
